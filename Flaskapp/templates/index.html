@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<h2>Player Stat Predictor</h2>
+
+	</div>
+	</header>
+
+    <div class="col-md-8">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+    </div>
+
+	<div class="ml-container">
+
+		<form action="" method="POST">
+		<p>Enter Your Player and Team Here</p>
+            {{ form.csrf_token }}
+            {{ form.name }}
+            <div class="form-group">
+                {{ form.player_search.label(class="form-control-label") }}
+                {{ form.player_search(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.team_search.label(class="form-control-label") }}
+                {{ form.team_search(class="form-control form-control-lg") }}
+            </div>
+            <input type="submit" class="btn-info" value="predict">
+
+		<!-- <input type="text" name="comment"/> -->
+		<!---<textarea name="message" rows="4" cols="50"></textarea> -->
+		<br/>
+
+
+	    </form>
+
+	</div>
+
+</body>
+</html>
