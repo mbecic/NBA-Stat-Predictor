@@ -5,4 +5,4 @@ Search Page
 ![alt text](https://i.imgur.com/QczrUEY.png)
 
 Results
-![alt text](https://imgur.com/Kha05rT)
+![alt text](https://i.imgur.com/Kha05rT.png)
